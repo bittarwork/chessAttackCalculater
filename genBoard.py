@@ -37,8 +37,9 @@ def save_chess_board(filename, board):
 
 
 def main():
-    board = generate_random_chess_board()
-    save_chess_board('board.txt', board)
+    for i in range(50):
+        board = generate_random_chess_board()
+        save_chess_board(f'board{i}.txt', board)
 
 
 if __name__ == "__main__":

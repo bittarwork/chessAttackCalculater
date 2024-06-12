@@ -255,5 +255,10 @@ def compute_chess_board_stats(board):
     print({"attacked_squares": attacked, "safe_squares": safe})
 
 
-chess_board = load_chess_board("board.txt")
-compute_chess_board_stats(chess_board)
+for i in range(50):
+    print(f'number {i+1}')
+    if i == 0:
+        chess_board = load_chess_board("board.txt")
+        compute_chess_board_stats(chess_board)
+    chess_board = load_chess_board(f"board{i}.txt")
+    compute_chess_board_stats(chess_board)
